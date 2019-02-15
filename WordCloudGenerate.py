@@ -37,7 +37,7 @@ def filter_emoji(sent):
 
 # 读取影评数据，jieba分词处理
 with open('hComments.txt', 'r', encoding="utf-8") as f1:
-    hComments = " ".join(jieba.analyse.extract_tags(f1.read(), topK=100))
+    hComments = " ".join(jieba.analyse.extract_tags(f1.read(), topK=100)) #tf/idf抽取关键词
 
 with open('mComments.txt', 'r', encoding="utf-8") as f2:
     mComments = " ".join(jieba.analyse.extract_tags(f2.read(), topK=100))
